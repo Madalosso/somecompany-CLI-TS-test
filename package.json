@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "test-run": "npm build && node dist/index.js --message \"Hello, Hyperlane!\""
+    "test-run": "npm run build && node dist/cli.js send -m \"Hello, Hyperlane!\"",
+    "test-run-2": "npm run build && node dist/cli.js send -m \"Hello, Hyperlane!\" --sourceChainId 11155111 --mailbox 0xfFAEF09B3cd11D9b20d1a19bECca54EEC2884766 -r https://ethereum-sepolia-rpc.publicnode.com -d 421614 -t 0xd0e3bd9fdfC791ddE8aa45c6227f9310D07A9C80"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +13,7 @@
   "description": "",
   "dependencies": {
     "commander": "^12.1.0",
+    "dotenv": "^16.4.5",
     "ethers": "^6.13.2",
     "typescript": "^5.6.2"
   },
