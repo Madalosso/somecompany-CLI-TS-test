@@ -4,8 +4,10 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "test-run": "npm run build && node dist/cli.js send -m \"Hello, Hyperlane!\"",
-    "test-run-2": "npm run build && node dist/cli.js send -m \"Hello, Hyperlane!\" --sourceChainId 11155111 --mailbox 0xfFAEF09B3cd11D9b20d1a19bECca54EEC2884766 -r https://ethereum-sepolia-rpc.publicnode.com -d 421614 -t 0xd0e3bd9fdfC791ddE8aa45c6227f9310D07A9C80"
+    "test-send": "npm run build && node dist/cli.js send --mailbox 0xfFAEF09B3cd11D9b20d1a19bECca54EEC2884766 -t 0xd0e3bd9fdfc791dde8aa45c6227f9310d07a9c80 -d 534351 -r https://ethereum-sepolia-rpc.publicnode.com -m \"Hello, Hyperlane!\"",
+    "test-search": "npm run build && node dist/cli.js search --mailbox 0xfFAEF09B3cd11D9b20d1a19bECca54EEC2884766 -r https://ethereum-sepolia-rpc.publicnode.com -j test/matching.json ",
+    "test-search-empty": "npm run build && node dist/cli.js search --mailbox 0xfFAEF09B3cd11D9b20d1a19bECca54EEC2884766 -r https://ethereum-sepolia-rpc.publicnode.com -j test/empty.json ",
+    "test-search-match2": "npm run build && node dist/cli.js search --mailbox 0xfFAEF09B3cd11D9b20d1a19bECca54EEC2884766 -r https://ethereum-sepolia-rpc.publicnode.com -j test/match2.json "
   },
   "keywords": [],
   "author": "",
