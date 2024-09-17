@@ -2,27 +2,32 @@
 
 [Requirements/description](https://hyperlanexyz.notion.site/Typescript-Challenge-8eb08b9ae4664b7cb570becda0606825)
 
-# TODO:
+## Requirements
 
-- Add/check missing instructions (push, clone and try)
+- node 22
+- npm 10.8.1
 
-## Test instructions/configs
+## Getting Started
 
 Follow these command from the directory root.
 
-1. Copy the content of `.env.example` to a `.env` file. (Adjust according to "Configuration" section)
+- Run `npm install`
+- Copy the .env.example file into a .env
+- Run `npm run build` to build a distribution at `/dist/cli.js`
 
-2. `npm install`
+## Test Commands
 
-3. `npm run build`.
+> These commands are defined at package.json. They call the CLI commands, filing the required parameters.
 
-4. Send command: `node dist/cli.js send -m "Hello, Hyperlane!"`
+- Send command: `npm run test-send`. This command will recreate a wallet using the .env `PRIVATE_KEY` which has some Sepolia ETH, connect to a RPC node provider, initialize the mailbox contract deployed on Sepolia and use it to send a message to the address `0xd0e3bd9fdfc791dde8aa45c6227f9310d07a9c80` on Scroll Sepolia (ChainID: 534351).
 
-5. Search command: `dist/cli.js search --mailbox 0xfFAEF09B3cd11D9b20d1a19bECca54EEC2884766 -r https://ethereum-sepolia-rpc.publicnode.com -j test/matching.json`
+- Search command: `npm run test-search`
 
-## .env Configuration
+## Customizations
 
-- QUERY_BLOCKS_CHUNK_SIZE: The amount of blocks queried over each RPC get_logs request. (RPC capacity may vary). Defaults to 50_000
+- You can use your personal wallet by overwriting the .env `PRIVATE_KEY` value
+
+- The amount of blocks queried per request can be altered by setting the .env `QUERY_BLOCKS_CHUNK_SIZE` variable. Note that RPC enforce different limits according to their own configuration (Default value is set to 50k blocks/request)
 
 ## Improvements
 

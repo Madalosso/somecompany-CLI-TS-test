@@ -1,6 +1,5 @@
 {
   "senderAddress": "0x9f3515b87Cef94B9DEB61eDB8867668365B9A64f",
-  "recipientAddress": "0xd0e3bd9fdfC791ddE8aa45c6227f9310D07A9C80",
-  "destinationDomain": 421614,
-  "originDomain": 421614
+  "recipientAddress": "0xd0e3bd9fdfc791dde8aa45c6227f9310d07a9c80",
+  "destinationDomain": 534351
 }
