@@ -21,7 +21,14 @@ Follow these command from the directory root.
 
 - Send command: `npm run test-send`. This command will recreate a wallet using the .env `PRIVATE_KEY` which has some Sepolia ETH, connect to a RPC node provider, initialize the mailbox contract deployed on Sepolia and use it to send a message to the address `0xd0e3bd9fdfc791dde8aa45c6227f9310d07a9c80` on Scroll Sepolia (ChainID: 534351).
 
-- Search command: `npm run test-search`
+- Search command: `npm run test-search`. This command will execute the query command using a json file set at `test/matching.json`, which should match the parameters used on the `npm run test-send` script. This command will likely match previous test attempts, but one should be able to inspect a new entry after running `npm run test-send`. Please note other json files within the `test` directory that can be used to assert proper query execution.
+
+## CLI Commands
+
+The CLI has helpers to list the supported commands and their usage.
+
+- `node dist/cli.js -h` will list the cli commands
+- `node dist/cli.js send -h` will list the send parameters necessary
 
 ## Customizations
 

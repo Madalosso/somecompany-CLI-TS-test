@@ -79,8 +79,8 @@ program
   .requiredOption("-m, --message <message>", "Message to send")
   .requiredOption("-mb, --mailbox <mailboxAddress>", "Mailbox address to send message to", validateAddress)
   .requiredOption("-r, --rpc <rpc>", "RPC URL to connect to", validateRpcUrl)
-  .requiredOption("-d, --destinationChainId <outChain>", "Destination chain")
-  .requiredOption("-t, --destinationAddress <destinationAddress>", "Destination address", validateAddress)
+  .requiredOption("-d, --destinationChainId <destination chain>", "Destination chain")
+  .requiredOption("-t, --destinationAddress <destination Address>", "Destination address", validateAddress)
   .action(async (options) => {
     console.log(`Sending message: ${options.message}`);
 
