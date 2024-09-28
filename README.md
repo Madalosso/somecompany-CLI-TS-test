@@ -1,6 +1,6 @@
 # Hyperlane Typescript Challenge
 
-[Requirements/description](https://hyperlanexyz.notion.site/Typescript-Challenge-8eb08b9ae4664b7cb570becda0606825)
+[Requirements/description](https://github.com/Madalosso/somecompany-CLI-TS-test/blob/1d1c8f546b3e5d909a36c1c28591e595d16d2d3b/REQUIREMENTS.md)
 
 ## Requirements
 
